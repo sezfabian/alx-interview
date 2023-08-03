@@ -22,8 +22,8 @@ def pascal_triangle(n):
     Myarray.append(row)
 
     for i in range(2, n):
-        row = [1] + [Myarray[i-1][j-1]
-                     + Myarray[i-1][j] for j in range(1, i)] + [1]
+        row = [1] + [Myarray[i-1][j-1] + Myarray[i-1][j]
+                     for j in range(1, i)] + [1]
         Myarray.append(row)
 
     return Myarray
