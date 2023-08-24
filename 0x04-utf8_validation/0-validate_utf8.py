@@ -9,16 +9,10 @@ def validUTF8(data):
     # convert data to binary string
     binary_str: str = ""
 
-    for i in data:
+    for i in datia:
         bin_str = bin(i)[2:]
         bin_str = bin_str.zfill(8)
         binary_str += bin_str
-
-    if len(binary_str) > 32:
-        for i in range(0, int(len(binary_str) / 8)):
-            if binary_str[i * 8] == "1":
-                return False
-        return True
 
     # check if binary string is valid
     if binary_str[0] == "0" and len(binary_str) == 8:
