@@ -7,7 +7,12 @@ def validUTF8(data):
     """UTF-8 Validation
     """
     # convert data to binary string
-    binary_str: str = arr_to_binary(data)
+    binary_str: str = ""
+
+    for i in data:
+        bin_str = bin(i)[2:]
+        bin_str = bin_str.zfill(8)
+        binary_str += bin_str
 
     if len(binary_str) > 32:
         for i in range(0, int(len(binary_str) / 8)):
@@ -32,17 +37,3 @@ def validUTF8(data):
             if binary_str[0:5] == "11110" and binary_str[24:26] == "10":
                 return True
     return False
-
-
-def arr_to_binary(arr: list[int]) -> str:
-    """Array to octet Binary
-    """
-    binary_str: str = ""
-
-    # convert array to binary string
-    for i in arr:
-        bin_str = bin(i)[2:]
-        bin_str = bin_str.zfill(8)
-        binary_str += bin_str
-
-    return binary_str
