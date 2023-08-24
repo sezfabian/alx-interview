@@ -3,7 +3,7 @@
 """
 
 
-def validUTF8(data: list[int]) -> bool:
+def validUTF8(data):
     """UTF-8 Validation
     """
     # convert data to binary string
