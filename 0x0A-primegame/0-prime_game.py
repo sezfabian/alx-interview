@@ -1,5 +1,15 @@
 #!/usr/bin/python3
+"""
+Defines a function that returns the winner of a game of primes.
+"""
+
+
 def isWinner(x, nums):
+    """
+    Args: x is the number of rounds played.
+          nums is a list of numbers.
+    Returns the winner of a game of primes.
+    """
     maria = 0
     ben = 0
 
