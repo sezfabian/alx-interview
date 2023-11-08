@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 def isWinner(x, nums):
     maria = 0
     ben = 0
