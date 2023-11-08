@@ -10,6 +10,9 @@ def isWinner(x, nums):
           nums is a list of numbers.
     Returns the winner of a game of primes.
     """
+    if x == 0 or nums == []:
+        return None
+
     maria = 0
     ben = 0
 
@@ -41,5 +44,7 @@ def isWinner(x, nums):
 
     if ben > maria:
         return "Ben"
-    else:
+    elif ben < maria:
         return "Maria"
+    else:
+        return None
